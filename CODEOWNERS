@@ -1,0 +1,5 @@
+# 官方产物与目录条目的变更必须由官方维护者审核。
+# 首次使用前：在组织里创建团队 Termii-App/core 并加入成员；
+# 或把 @Termii-App/core 替换为你的 GitHub 用户名。
+packages/official/ @Termii-App/core
+catalog.json @Termii-App/core

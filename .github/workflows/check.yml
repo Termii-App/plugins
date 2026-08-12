@@ -1,0 +1,36 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Validate catalog schema
+        run: node .github/scripts/validate-catalog.mjs
+
+      # 官方包必须用官方信任根公钥验签通过（伪造 / 篡改的包在此被拒）。
+      - name: Verify official package signatures
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          pkgs=(packages/official/*.tar.gz)
+          if [ ${#pkgs[@]} -gt 0 ]; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq minisign
+            for f in "${pkgs[@]}"; do
+              minisign -Vm "$f" -x "$f.sig" -p .github/official-key.pub -q
+              echo "✓ ${f} 签名验证通过"
+            done
+          else
+            echo "（packages/official/ 下暂无包）"
+          fi

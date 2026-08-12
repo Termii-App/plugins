@@ -1,0 +1,7 @@
+# catalog.json 不缓存（应用每次拉取都读到最新目录）。
+/catalog.json
+  Cache-Control: no-cache
+
+# 插件包短缓存（发布新版本后最多 5 分钟生效）。
+/packages/*
+  Cache-Control: public, max-age=300

@@ -30,6 +30,34 @@
 - `apiVersion` 不得超过宿主当前支持版本（`3`）
 - 未签名包可安装（走信任确认弹窗）；带签名但验签失败会被拒绝
 
+## 自动发布链路（CI/CD）
+
+```
+Termii-App/termii  Actions（release-plugins，手动触发）
+  构建 main.js → minisign 签名 → 打包 tar.gz → 生成 catalog.json
+   └── push 到本仓库 main
+        └── 本仓库 Actions（deploy）
+             └── Cloudflare Pages 项目 termii-plugins
+                  └── https://plugins.termii.meowdream.cn/（catalog.json + packages/）
+```
+
+- 下载流量全走 Cloudflare（GitHub 不承担任何插件下载流量）
+- 每次 PR / push 自动跑 `.github/workflows/check.yml`：catalog schema 校验 +
+  `packages/official/` 全部包用官方公钥（`.github/official-key.pub`）minisign 验签
+- `CODEOWNERS`：`packages/official/` 与 `catalog.json` 的变更需要官方维护者审核
+  （首次使用前创建组织团队 `Termii-App/core` 或把代码里的 `@Termii-App/core`
+  替换成你的用户名）
+
+### 首次配置（一次性）
+
+1. Cloudflare 控制台新建 Pages 项目 `termii-plugins`（Framework preset: None）
+2. 把子域 `plugins.termii.meowdream.cn` CNAME → `termii-plugins.pages.dev`
+3. 本仓库 Secrets 配置：
+   | Secret | 值 |
+   | --- | --- |
+   | `CLOUDFLARE_API_TOKEN` | Cloudflare API token（权限：Cloudflare Pages — Edit） |
+   | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 账户 ID |
+
 ## 官方插件
 
 | 插件 | 说明 |

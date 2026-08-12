@@ -1,0 +1,20 @@
+# Cloudflare Pages — Termii 插件市场（catalog.json + packages/）
+#
+# 对应 Cloudflare 项目：termii-plugins
+# 内容来源：本仓库根目录（catalog.json + packages/），由
+# .github/workflows/deploy.yml 在 main 分支推送时自动部署。
+#
+# 域名：plugins.termii.meowdream.cn（termii.meowdream.cn 的子域，同一
+# Cloudflare 账户/CDN，插件下载流量全走 Cloudflare 不走 GitHub）。
+# 首次配置：控制台把该子域 CNAME → termii-plugins.pages.dev。
+#
+# 前端读取地址（主仓库 src/lib/plugins/catalog.ts 的 CATALOG_URL）：
+#   https://plugins.termii.meowdream.cn/catalog.json
+#
+# 使用：
+#   npx wrangler pages dev      # 本地预览
+#   npx wrangler pages deploy . --project-name=termii-plugins   # 手动部署
+
+name = "termii-plugins"
+pages_build_output_dir = "."
+compatibility_date = "2026-08-12"
