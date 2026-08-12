@@ -18,6 +18,9 @@ jobs:
         run: node .github/scripts/validate-catalog.mjs
 
       # 官方包必须用官方信任根公钥验签通过（伪造 / 篡改的包在此被拒）。
+      # 注意：tauri signer 生成的 .sig 是「标准 minisign 文本的 base64
+      # 单行包装」（updater 格式，与宿主 minisign_verify 一致），minisign
+      # CLI 需要先 base64 解码回标准格式再验证。
       - name: Verify official package signatures
         run: |
           set -euo pipefail
@@ -27,7 +30,9 @@ jobs:
             sudo apt-get update -qq
             sudo apt-get install -y -qq minisign
             for f in "${pkgs[@]}"; do
-              minisign -Vm "$f" -x "$f.sig" -p .github/official-key.pub -q
+              base64 -d "$f.sig" > "$f.sig.raw"
+              minisign -Vm "$f" -x "$f.sig.raw" -p .github/official-key.pub -q
+              rm -f "$f.sig.raw"
               echo "✓ ${f} 签名验证通过"
             done
           else
