@@ -10,8 +10,8 @@
       "apiVersion": 3,
       "capabilities": [],
       "official": true,
-      "downloadUrl": "undefined/termii-batch-1.0.0.tar.gz",
-      "sigUrl": "undefined/termii-batch-1.0.0.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.0.0.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.0.0.tar.gz.sig"
     },
     {
       "id": "termii-docker",
@@ -23,8 +23,8 @@
         "process"
       ],
       "official": true,
-      "downloadUrl": "undefined/termii-docker-1.1.0.tar.gz",
-      "sigUrl": "undefined/termii-docker-1.1.0.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-docker-1.1.0.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-docker-1.1.0.tar.gz.sig"
     },
     {
       "id": "termii-snippets",
@@ -34,8 +34,8 @@
       "apiVersion": 3,
       "capabilities": [],
       "official": true,
-      "downloadUrl": "undefined/termii-snippets-1.1.0.tar.gz",
-      "sigUrl": "undefined/termii-snippets-1.1.0.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-snippets-1.1.0.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-snippets-1.1.0.tar.gz.sig"
     },
     {
       "id": "termii-tunnels",
@@ -45,8 +45,8 @@
       "apiVersion": 3,
       "capabilities": [],
       "official": true,
-      "downloadUrl": "undefined/termii-tunnels-1.0.0.tar.gz",
-      "sigUrl": "undefined/termii-tunnels-1.0.0.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.0.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.0.tar.gz.sig"
     }
   ]
 }
