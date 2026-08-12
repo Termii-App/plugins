@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "_comment": "Termii plugin catalog schema. 前端读取: 主仓库 src/lib/plugins/catalog.ts. Entry fields: id (kebab-case, required; 也是安装后的目录名), name (required), version (semver, required), description (optional), author (optional), apiVersion (number, required; > 宿主 SUPPORTED_API_VERSION 拒绝加载), minAppVersion (optional semver; 宿主版本下限), capabilities (string[], optional; 能力声明, 缺省 []; process/sidecar 为 L1), downloadUrl (required; https, .tar.gz 插件包), sigUrl (optional; https, minisign 签名文本, 缺失 = 无签名安装 signed=false). version=1 表示 schema 版本.",
+  "plugins": []
+}
