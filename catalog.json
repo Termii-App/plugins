@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "_comment": "Termii plugin catalog schema (docs/plugin-dev.md §7.4 / 组织 termii/plugins 仓库). 前端读取: src/lib/plugins/catalog.ts. Entry fields: id (kebab-case, required; 也是安装后的目录名), name (required), version (semver, required), description (optional), author (optional), apiVersion (number, required; > 宿主 SUPPORTED_API_VERSION 拒绝加载), minAppVersion (optional semver; 宿主版本下限), capabilities (string[], optional; 能力声明, 缺省 []; process/sidecar 为 L1), dependencies (string[], optional; 前置依赖插件 id, 宿主按拓扑序加载, 依赖不可达时跳过), official (bool, optional; 官方发布, 宿主验签通过后保留 official 标记), downloadUrl (required; https, .tar.gz 插件包), sigUrl (optional; https, minisign 签名文本, 缺失 = 无签名安装 signed=false). version=1 表示 schema 版本.",
+  "_comment": "Termii plugin catalog schema (docs/plugin-dev.md §7.4 / 组织 termii/plugins 仓库). 前端读取: src/lib/plugins/catalog.ts. Entry fields: id (kebab-case, required; 也是安装后的目录名), name (required), version (semver, required), description (optional), author (optional), apiVersion (number, required; > 宿主 SUPPORTED_API_VERSION 拒绝加载), minAppVersion (optional semver; 宿主版本下限), capabilities (string[], optional; 能力声明, 缺省 []; process/sidecar 为 L1), dependencies (string[], optional; 前置依赖插件 id, 宿主按拓扑序加载, 依赖不可达时跳过), optionalDependencies (string[], optional; 可选依赖插件 id, 宿主只做尽力排序, 缺失不阻止加载, 由插件运行时自检降级), official (bool, optional; 官方发布, 宿主验签通过后保留 official 标记), downloadUrl (required; https, .tar.gz 插件包), sigUrl (optional; https, minisign 签名文本, 缺失 = 无签名安装 signed=false). version=1 表示 schema 版本.",
   "plugins": [
     {
       "id": "termii-batch",
       "name": "批量任务",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "description": "批量任务（多主机 + 本地）执行与结果导出。",
       "author": "Termii",
       "apiVersion": 3,
       "capabilities": [],
       "official": true,
-      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.1.0.tar.gz",
-      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.1.0.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.2.0.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.2.0.tar.gz.sig"
     },
     {
       "id": "termii-docker",
