@@ -1,5 +1,52 @@
 {
   "version": 1,
-  "_comment": "Termii plugin catalog schema. 前端读取: 主仓库 src/lib/plugins/catalog.ts. Entry fields: id (kebab-case, required; 也是安装后的目录名), name (required), version (semver, required), description (optional), author (optional), apiVersion (number, required; > 宿主 SUPPORTED_API_VERSION 拒绝加载), minAppVersion (optional semver; 宿主版本下限), capabilities (string[], optional; 能力声明, 缺省 []; process/sidecar 为 L1), downloadUrl (required; https, .tar.gz 插件包), sigUrl (optional; https, minisign 签名文本, 缺失 = 无签名安装 signed=false). version=1 表示 schema 版本.",
-  "plugins": []
+  "_comment": "Termii plugin catalog schema (docs/plugin-dev.md §7.4 / 组织 termii/plugins 仓库). 前端读取: src/lib/plugins/catalog.ts. Entry fields: id (kebab-case, required; 也是安装后的目录名), name (required), version (semver, required), description (optional), author (optional), apiVersion (number, required; > 宿主 SUPPORTED_API_VERSION 拒绝加载), minAppVersion (optional semver; 宿主版本下限), capabilities (string[], optional; 能力声明, 缺省 []; process/sidecar 为 L1), official (bool, optional; 官方发布, 宿主验签通过后保留 official 标记), downloadUrl (required; https, .tar.gz 插件包), sigUrl (optional; https, minisign 签名文本, 缺失 = 无签名安装 signed=false). version=1 表示 schema 版本.",
+  "plugins": [
+    {
+      "id": "termii-batch",
+      "name": "批量任务",
+      "version": "1.0.0",
+      "description": "批量任务（多主机 + 本地）执行与结果导出。",
+      "apiVersion": 3,
+      "capabilities": [],
+      "official": true,
+      "downloadUrl": "undefined/termii-batch-1.0.0.tar.gz",
+      "sigUrl": "undefined/termii-batch-1.0.0.tar.gz.sig"
+    },
+    {
+      "id": "termii-docker",
+      "name": "Docker 管理",
+      "version": "1.1.0",
+      "description": "容器 / 镜像 / Compose 管理与 Docker 相关偏好设置。",
+      "apiVersion": 3,
+      "capabilities": [
+        "process"
+      ],
+      "official": true,
+      "downloadUrl": "undefined/termii-docker-1.1.0.tar.gz",
+      "sigUrl": "undefined/termii-docker-1.1.0.tar.gz.sig"
+    },
+    {
+      "id": "termii-snippets",
+      "name": "命令片段",
+      "version": "1.1.0",
+      "description": "命令片段库：保存常用命令模板，一键发送到当前终端。",
+      "apiVersion": 3,
+      "capabilities": [],
+      "official": true,
+      "downloadUrl": "undefined/termii-snippets-1.1.0.tar.gz",
+      "sigUrl": "undefined/termii-snippets-1.1.0.tar.gz.sig"
+    },
+    {
+      "id": "termii-tunnels",
+      "name": "端口转发",
+      "version": "1.0.0",
+      "description": "端口转发 / 隧道规则管理与远程转发配置下发。",
+      "apiVersion": 3,
+      "capabilities": [],
+      "official": true,
+      "downloadUrl": "undefined/termii-tunnels-1.0.0.tar.gz",
+      "sigUrl": "undefined/termii-tunnels-1.0.0.tar.gz.sig"
+    }
+  ]
 }
