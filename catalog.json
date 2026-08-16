@@ -41,6 +41,20 @@
       "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-snippets-1.1.1.tar.gz.sig"
     },
     {
+      "id": "termii-sync",
+      "name": "配置与回放同步",
+      "version": "0.1.0",
+      "description": "将 Termii 完整配置快照与回放/录制目录同步到 S3（原生 Rust sidecar 实现，不依赖外部 CLI）。",
+      "author": "Termii",
+      "apiVersion": 3,
+      "capabilities": [
+        "sidecar"
+      ],
+      "official": true,
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-sync-0.1.0.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-sync-0.1.0.tar.gz.sig"
+    },
+    {
       "id": "termii-tunnels",
       "name": "端口转发",
       "version": "1.0.5",
