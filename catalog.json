@@ -43,14 +43,14 @@
     {
       "id": "termii-tunnels",
       "name": "端口转发",
-      "version": "1.0.3",
+      "version": "1.0.5",
       "description": "端口转发 / 隧道规则管理与远程转发配置下发。",
       "author": "Termii",
       "apiVersion": 3,
       "capabilities": [],
       "official": true,
-      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.3.tar.gz",
-      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.3.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.5.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.5.tar.gz.sig"
     }
   ]
 }
