@@ -5,19 +5,19 @@
     {
       "id": "termii-batch",
       "name": "批量任务",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "description": "批量任务（多主机 + 本地）执行与结果导出。",
       "author": "Termii",
       "apiVersion": 3,
       "capabilities": [],
       "official": true,
-      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.2.1.tar.gz",
-      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.2.1.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.2.2.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-batch-1.2.2.tar.gz.sig"
     },
     {
       "id": "termii-docker",
       "name": "Docker 管理",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "description": "容器 / 镜像 / Compose 管理与 Docker 相关偏好设置。",
       "author": "Termii",
       "apiVersion": 3,
@@ -25,25 +25,25 @@
         "process"
       ],
       "official": true,
-      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-docker-1.2.0.tar.gz",
-      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-docker-1.2.0.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-docker-1.2.1.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-docker-1.2.1.tar.gz.sig"
     },
     {
       "id": "termii-snippets",
       "name": "命令片段",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "description": "命令片段库：保存常用命令模板，一键发送到当前终端。",
       "author": "Termii",
       "apiVersion": 3,
       "capabilities": [],
       "official": true,
-      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-snippets-1.1.1.tar.gz",
-      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-snippets-1.1.1.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-snippets-1.1.2.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-snippets-1.1.2.tar.gz.sig"
     },
     {
       "id": "termii-sync",
       "name": "配置与回放同步",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "description": "将 Termii 完整配置快照与回放/录制目录同步到 S3（原生 Rust sidecar 实现，不依赖外部 CLI）。",
       "author": "Termii",
       "apiVersion": 3,
@@ -51,20 +51,20 @@
         "sidecar"
       ],
       "official": true,
-      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-sync-0.2.0.tar.gz",
-      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-sync-0.2.0.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-sync-0.2.1.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-sync-0.2.1.tar.gz.sig"
     },
     {
       "id": "termii-tunnels",
       "name": "端口转发",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "description": "端口转发 / 隧道规则管理与远程转发配置下发。",
       "author": "Termii",
       "apiVersion": 3,
       "capabilities": [],
       "official": true,
-      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.5.tar.gz",
-      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.5.tar.gz.sig"
+      "downloadUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.6.tar.gz",
+      "sigUrl": "https://plugins.termii.meowdream.cn/packages/official/termii-tunnels-1.0.6.tar.gz.sig"
     }
   ]
 }
